@@ -3,6 +3,7 @@ from torch import nn
 import os
 from ..utils import concat_box_prediction_layers
 from atss_core.layers import SigmoidFocalLoss
+from atss_core.layers import SigmoidWarpageLoss
 from atss_core.modeling.matcher import Matcher
 from atss_core.structures.boxlist_ops import boxlist_iou
 from atss_core.structures.boxlist_ops import cat_boxlist
@@ -28,7 +29,8 @@ class ATSSLossComputation(object):
 
     def __init__(self, cfg, box_coder):
         self.cfg = cfg
-        self.cls_loss_func = SigmoidFocalLoss(cfg.MODEL.ATSS.LOSS_GAMMA, cfg.MODEL.ATSS.LOSS_ALPHA)
+        #self.cls_loss_func = SigmoidFocalLoss(cfg.MODEL.ATSS.LOSS_GAMMA, cfg.MODEL.ATSS.LOSS_ALPHA)
+        self.cls_loss_func = SigmoidWarpageLoss(cfg.MODEL.ATSS.LOSS_GAMMA, cfg.MODEL.ATSS.LOSS_ALPHA, cfg.MODEL.ATSS.LOSS_BETA)
         self.centerness_loss_func = nn.BCEWithLogitsLoss(reduction="sum")
         self.matcher = Matcher(cfg.MODEL.ATSS.FG_IOU_THRESHOLD, cfg.MODEL.ATSS.BG_IOU_THRESHOLD, True)
         self.box_coder = box_coder
@@ -71,10 +73,10 @@ class ATSSLossComputation(object):
         losses = 1 - gious
 
         if weight is not None and weight.sum() > 0:
-            return (losses * weight).sum()
+            return (losses * weight).sum(), ious
         else:
             assert losses.numel() != 0
-            return losses.sum()
+            return losses.sum(), ious
 
     def prepare_targets(self, targets, anchors):
         cls_labels = []
@@ -286,7 +288,6 @@ class ATSSLossComputation(object):
         total_num_pos = reduce_sum(pos_inds.new_tensor([pos_inds.numel()])).item()
         num_pos_avg_per_gpu = max(total_num_pos / float(num_gpus), 1.0)
 
-        cls_loss = self.cls_loss_func(box_cls_flatten, labels_flatten.int()) / num_pos_avg_per_gpu
 
         if pos_inds.numel() > 0:
             box_regression_flatten = box_regression_flatten[pos_inds]
@@ -296,16 +297,22 @@ class ATSSLossComputation(object):
             centerness_targets = self.compute_centerness_targets(reg_targets_flatten, anchors_flatten)
 
             sum_centerness_targets_avg_per_gpu = reduce_sum(centerness_targets.sum()).item() / float(num_gpus)
-            reg_loss = self.GIoULoss(box_regression_flatten, reg_targets_flatten, anchors_flatten,
-                                     weight=centerness_targets) / sum_centerness_targets_avg_per_gpu
+            reg_loss, labels_IoUs = self.GIoULoss(box_regression_flatten, reg_targets_flatten, anchors_flatten,
+                                     weight=centerness_targets)
+            reg_loss = reg_loss / sum_centerness_targets_avg_per_gpu
             centerness_loss = self.centerness_loss_func(centerness_flatten, centerness_targets) / num_pos_avg_per_gpu
         else:
             reg_loss = box_regression_flatten.sum()
             centerness_loss = reg_loss * 0
+            labels_IoUs = 1
+
+
+        centerness_flatten_ = torch.ones_like(box_cls_flatten).cuda()
+        centerness_flatten_[pos_inds] = centerness_flatten.detach()
+        labels_IoUs_flatten = torch.zeros_like(box_cls_flatten).cuda()
+        labels_IoUs_flatten[pos_inds] = labels_IoUs.detach()
+        cls_loss = self.cls_loss_func(box_cls_flatten,  labels_flatten.int(), centerness_flatten_, labels_IoUs_flatten) / num_pos_avg_per_gpu
 
         return cls_loss, reg_loss * self.cfg.MODEL.ATSS.REG_LOSS_WEIGHT, centerness_loss
 
 
-def make_atss_loss_evaluator(cfg, box_coder):
-    loss_evaluator = ATSSLossComputation(cfg, box_coder)
-    return loss_evaluator
