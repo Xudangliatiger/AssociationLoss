@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c56f504d-0de5-422d-a24f-d94bbb68ab2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../AssociationLoss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AssociationLoss/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../AssociationLoss/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +184,7 @@
       <updated>1594365026703</updated>
       <workItem from="1594365037343" duration="3034000" />
       <workItem from="1595218461036" duration="2422000" />
-      <workItem from="1595820516179" duration="4541000" />
+      <workItem from="1595820516179" duration="6636000" />
     </task>
     <task id="LOCAL-00001" summary="..">
       <created>1595837639542</created>
@@ -192,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595837639542</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="..">
+      <created>1595838020734</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595838020734</updated>
+    </task>
+    <task id="LOCAL-00003" summary="..">
+      <created>1595838139034</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595838139034</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,11 +218,11 @@
     <option name="LAST_COMMIT_MESSAGE" value=".." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2600" y="58" key="CommitChangelistDialog2" timestamp="1595838115956">
+    <state x="2600" y="58" key="CommitChangelistDialog2" timestamp="1595838137188">
       <screen x="2160" y="0" width="1920" height="1040" />
     </state>
     <state x="330" y="51" key="CommitChangelistDialog2/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595838019916" />
-    <state x="2600" y="58" key="CommitChangelistDialog2/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1595838115956" />
+    <state x="2600" y="58" key="CommitChangelistDialog2/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1595838137188" />
     <state x="501" y="202" key="FileChooserDialogImpl" timestamp="1595836636210">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -224,13 +239,18 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="222" y="103" key="SettingsEditor/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595836079797" />
-    <state x="2521" y="281" key="Vcs.Push.Dialog.v2" timestamp="1595837779944">
+    <state x="2986" y="283" key="Vcs.Push.Dialog.v2" timestamp="1595838190063">
       <screen x="2160" y="0" width="1920" height="1040" />
     </state>
     <state x="2521" y="281" key="Vcs.Push.Dialog.v2/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595837779944" />
+    <state x="2986" y="283" key="Vcs.Push.Dialog.v2/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1595838190063" />
     <state x="517" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595837920752">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="517" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595837920752" />
+    <state x="2783" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595844380597">
+      <screen x="2160" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2783" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1595844380597" />
   </component>
 </project>
