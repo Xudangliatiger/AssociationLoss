@@ -203,10 +203,11 @@
     <option name="LAST_COMMIT_MESSAGE" value=".." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="330" y="51" key="CommitChangelistDialog2" timestamp="1595837638332">
-      <screen x="0" y="0" width="1440" height="920" />
+    <state x="2600" y="58" key="CommitChangelistDialog2" timestamp="1595838115956">
+      <screen x="2160" y="0" width="1920" height="1040" />
     </state>
-    <state x="330" y="51" key="CommitChangelistDialog2/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595837638332" />
+    <state x="330" y="51" key="CommitChangelistDialog2/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595838019916" />
+    <state x="2600" y="58" key="CommitChangelistDialog2/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1595838115956" />
     <state x="501" y="202" key="FileChooserDialogImpl" timestamp="1595836636210">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
