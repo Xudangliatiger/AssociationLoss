@@ -1,7 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c56f504d-0de5-422d-a24f-d94bbb68ab2f" name="Default Changelist" comment="" />
+    <list default="true" id="c56f504d-0de5-422d-a24f-d94bbb68ab2f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AssociationLoss/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/config/defaults.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/config/paths_catalog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/ROIAlign.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/ROIPool.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/SigmoidFocalLoss.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/cpu/ROIAlign_cpu.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/cpu/nms_cpu.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/cpu/vision.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/cuda/ROIAlign_cuda.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/cuda/ROIPool_cuda.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/cuda/SigmoidFocalLoss_cuda.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/cuda/nms.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/cuda/vision.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/nms.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/csrc/vision.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/collate_batch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/coco.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/concat_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/evaluation/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/evaluation/coco/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/evaluation/coco/coco_eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/evaluation/voc/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/evaluation/voc/voc_eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/list_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/datasets/voc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/samplers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/samplers/distributed.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/samplers/grouped_batch_sampler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/samplers/iteration_based_batch_sampler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/transforms/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/transforms/build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/data/transforms/transforms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/engine/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/engine/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/engine/trainer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/batch_norm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/correlation_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/iou_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/misc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/nms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/roi_align.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/roi_pool.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/scale.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/sigmoid_focal_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/smooth_l1_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/layers/warpage_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/backbone/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/backbone/backbone.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/backbone/fbnet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/backbone/fbnet_builder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/backbone/fbnet_modeldef.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/backbone/fpn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/backbone/mobilenet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/backbone/resnet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/balanced_positive_negative_sampler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/box_coder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/detector/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/detector/detectors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/detector/generalized_rcnn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/make_layers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/matcher.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/poolers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/registry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/box_head/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/box_head/box_head.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/box_head/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/box_head/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/box_head/roi_box_feature_extractors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/box_head/roi_box_predictors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/keypoint_head/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/keypoint_head/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/keypoint_head/keypoint_head.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/keypoint_head/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/keypoint_head/roi_keypoint_feature_extractors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/keypoint_head/roi_keypoint_predictors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/mask_head/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/mask_head/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/mask_head/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/mask_head/mask_head.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/mask_head/roi_mask_feature_extractors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/mask_head/roi_mask_predictors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/roi_heads/roi_heads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/anchor_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/fcos/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/fcos/fcos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/fcos/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/fcos/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/retinanet/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/retinanet/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/retinanet/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/retinanet/retinanet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/rpn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/rpn/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/modeling/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/solver/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/solver/build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/solver/lr_scheduler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/structures/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/structures/bounding_box.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/structures/boxlist_ops.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/structures/image_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/structures/keypoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/structures/segmentation_mask.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/c2_model_loading.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/checkpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/collect_env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/comm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/cv2_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/imports.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/metric_logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/miscellaneous.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/model_serialization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/model_zoo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/registry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssociationLoss/utils/timer.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +157,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AssociationLoss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WarpageLoss" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
@@ -180,7 +314,7 @@
       <updated>1594365026703</updated>
       <workItem from="1594365037343" duration="3034000" />
       <workItem from="1595218461036" duration="2422000" />
-      <workItem from="1595820516179" duration="3143000" />
+      <workItem from="1595820516179" duration="4225000" />
     </task>
     <servers />
   </component>
@@ -188,14 +322,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="501" y="202" key="FileChooserDialogImpl" timestamp="1595836441729">
+    <state x="501" y="202" key="FileChooserDialogImpl" timestamp="1595836636210">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="501" y="202" key="FileChooserDialogImpl/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595836441729" />
-    <state x="562" y="334" width="340" height="304" key="Github.ShareDialog" timestamp="1595836416868">
+    <state x="501" y="202" key="FileChooserDialogImpl/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595836636210" />
+    <state x="619" y="333" width="340" height="304" key="Github.ShareDialog" timestamp="1595836512961">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="562" y="334" width="340" height="304" key="Github.ShareDialog/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595836416868" />
+    <state x="619" y="333" width="340" height="304" key="Github.ShareDialog/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595836512961" />
+    <state x="518" y="162" key="Github.UntrackedFilesDialog" timestamp="1595836527277">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="518" y="162" key="Github.UntrackedFilesDialog/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595836527277" />
     <state x="222" y="103" key="SettingsEditor" timestamp="1595836079797">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
