@@ -2,22 +2,139 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c56f504d-0de5-422d-a24f-d94bbb68ab2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/atss_core/modeling/rpn/Discdet/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/atss_core/modeling/rpn/Discdet/atss.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/atss_core/modeling/rpn/Discdet/inference.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/atss_core/modeling/rpn/Discdet/loss.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atss_core/config/defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/atss_core/config/defaults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atss_core/config/paths_catalog.py" beforeDir="false" afterPath="$PROJECT_DIR$/atss_core/config/paths_catalog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atss_core/layers/sigmoid_warpage_loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/atss_core/layers/sigmoid_warpage_loss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atss_core/modeling/rpn/atss/atss.py" beforeDir="false" afterPath="$PROJECT_DIR$/atss_core/modeling/rpn/atss/atss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atss_core/modeling/rpn/atss/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/atss_core/modeling/rpn/atss/inference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atss_core/modeling/rpn/atss/loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/atss_core/modeling/rpn/atss/loss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/atss/atss_R_50_FPN_1x.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/atss/atss_R_50_FPN_1x.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/atss_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/atss_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/defaults.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paths_catalog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/ROIAlign.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/ROIPool.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/SigmoidFocalLoss.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/cpu/ROIAlign_cpu.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/cpu/nms_cpu.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/cpu/vision.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/cuda/ROIAlign_cuda.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/cuda/ROIPool_cuda.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/cuda/SigmoidFocalLoss_cuda.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/cuda/nms.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/cuda/vision.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/nms.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csrc/vision.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/collate_batch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/coco.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/concat_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/evaluation/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/evaluation/coco/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/evaluation/coco/coco_eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/evaluation/voc/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/evaluation/voc/voc_eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/list_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datasets/voc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/samplers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/samplers/distributed.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/samplers/grouped_batch_sampler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/samplers/iteration_based_batch_sampler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/transforms/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/transforms/build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/transforms/transforms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/trainer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/batch_norm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/correlation_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/iou_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/misc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/nms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/roi_align.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/roi_pool.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/scale.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/sigmoid_focal_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/smooth_l1_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers/warpage_loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/backbone/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/backbone/backbone.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/backbone/fbnet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/backbone/fbnet_builder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/backbone/fbnet_modeldef.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/backbone/fpn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/backbone/mobilenet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/backbone/resnet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/balanced_positive_negative_sampler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/box_coder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/detector/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/detector/detectors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/detector/generalized_rcnn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/make_layers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/matcher.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/poolers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/registry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/box_head/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/box_head/box_head.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/box_head/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/box_head/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/box_head/roi_box_feature_extractors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/box_head/roi_box_predictors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/keypoint_head/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/keypoint_head/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/keypoint_head/keypoint_head.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/keypoint_head/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/keypoint_head/roi_keypoint_feature_extractors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/keypoint_head/roi_keypoint_predictors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/mask_head/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/mask_head/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/mask_head/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/mask_head/mask_head.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/mask_head/roi_mask_feature_extractors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/mask_head/roi_mask_predictors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/roi_heads/roi_heads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/anchor_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/fcos/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/fcos/fcos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/fcos/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/fcos/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/retinanet/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/retinanet/inference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/retinanet/loss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/retinanet/retinanet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/rpn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/rpn/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeling/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solver/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solver/build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solver/lr_scheduler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/structures/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/structures/bounding_box.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/structures/boxlist_ops.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/structures/image_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/structures/keypoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/structures/segmentation_mask.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/c2_model_loading.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/checkpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/collect_env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/comm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cv2_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/imports.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/metric_logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/miscellaneous.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/model_serialization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/model_zoo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/registry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/timer.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,18 +316,30 @@
       <workItem from="1595218461036" duration="2422000" />
       <workItem from="1595820516179" duration="3143000" />
       <workItem from="1595904596685" duration="45000" />
-      <workItem from="1595904654607" duration="1142000" />
+      <workItem from="1595904654607" duration="2402000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1595905957801</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595905957801</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2720" y="110" key="CommitChangelistDialog2" timestamp="1595905927842">
+    <state x="2720" y="110" key="CommitChangelistDialog2" timestamp="1595905956998">
       <screen x="2160" y="0" width="1920" height="1040" />
     </state>
-    <state x="2720" y="110" key="CommitChangelistDialog2/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1595905927842" />
+    <state x="2720" y="110" key="CommitChangelistDialog2/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1595905956998" />
     <state x="501" y="202" key="FileChooserDialogImpl" timestamp="1595836441729">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -223,10 +352,11 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="222" y="103" key="SettingsEditor/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595836079797" />
-    <state x="2521" y="281" key="Vcs.Push.Dialog.v2" timestamp="1595836471194">
+    <state x="2521" y="281" key="Vcs.Push.Dialog.v2" timestamp="1595905968778">
       <screen x="2160" y="0" width="1920" height="1040" />
     </state>
     <state x="2521" y="281" key="Vcs.Push.Dialog.v2/0.0.1440.920/2160.0.1920.1040@0.0.1440.920" timestamp="1595836471194" />
+    <state x="2521" y="281" key="Vcs.Push.Dialog.v2/0.0.1440.920/2160.0.1920.1040@2160.0.1920.1040" timestamp="1595905968778" />
     <state x="2800" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595904749850">
       <screen x="2160" y="0" width="1920" height="1040" />
     </state>
