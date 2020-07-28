@@ -30,7 +30,7 @@ class ATSSPostProcessor(torch.nn.Module):
         self.box_coder = box_coder
         self.bbox_aug_vote = bbox_aug_vote
 
-    def forward_for_single_feature_map(self, box_cls, box_regression, anchors):
+    def forward_for_single_feature_map(self, box_cls, box_regression, centerness, anchors):
         N, _, H, W = box_cls.shape
         A = box_regression.size(1) // 4
         C = box_cls.size(1) // A
@@ -46,12 +46,11 @@ class ATSSPostProcessor(torch.nn.Module):
         pre_nms_top_n = candidate_inds.view(N, -1).sum(1)
         pre_nms_top_n = pre_nms_top_n.clamp(max=self.pre_nms_top_n)
 
-        # centerness = permute_and_flatten(centerness, N, A, 1, H, W)
-        #
-        # centerness = centerness.reshape(N, -1).sigmoid()
+        centerness = permute_and_flatten(centerness, N, A, 1, H, W)
+        centerness = centerness.reshape(N, -1).sigmoid()
 
         #multiply the classification scores with centerness scores
-        #box_cls = box_cls * centerness[:, :, None]
+        box_cls = box_cls * centerness[:, :, None]
 
         results = []
         for per_box_cls, per_box_regression, per_pre_nms_top_n, per_candidate_inds, per_anchors \
@@ -80,12 +79,12 @@ class ATSSPostProcessor(torch.nn.Module):
 
         return results
 
-    def forward(self, box_cls, box_regression, anchors):
+    def forward(self, box_cls, box_regression, centerness, anchors):
         sampled_boxes = []
         anchors = list(zip(*anchors))
-        for _, (o, b, a) in enumerate(zip(box_cls, box_regression, anchors)):
+        for _, (o, b, c, a) in enumerate(zip(box_cls, box_regression, centerness, anchors)):
             sampled_boxes.append(
-                self.forward_for_single_feature_map(o, b, a)
+                self.forward_for_single_feature_map(o, b, c, a)
             )
 
         boxlists = list(zip(*sampled_boxes))

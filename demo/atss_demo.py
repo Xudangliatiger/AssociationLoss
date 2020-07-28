@@ -8,6 +8,7 @@ from predictor import COCODemo
 import time
 
 
+
 def main():
     parser = argparse.ArgumentParser(description="PyTorch Object Detection Webcam Demo")
     parser.add_argument(
@@ -18,7 +19,7 @@ def main():
     )
     parser.add_argument(
         "--weights",
-        default="ATSS_R_50_FPN_1x.pth",
+        default="/opt/data/private/ATSS/training_dir/atss_R_50_FPN_1x_warpage_w_centerness/model_final.pth",
         metavar="FILE",
         help="path to the trained model",
     )
@@ -100,7 +101,8 @@ def main():
         start_time = time.time()
         composite = coco_demo.run_on_opencv_image(img)
         print("{}\tinference time: {:.2f}s".format(im_name, time.time() - start_time))
-        cv2.imshow(im_name, composite)
+        #cv2.imshow(im_name, composite)
+        cv2.imwrite('inference'+ im_name, composite)
     print("Press any keys to exit ...")
     cv2.waitKey()
     cv2.destroyAllWindows()

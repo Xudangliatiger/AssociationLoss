@@ -1,0 +1,2 @@
+#！/bin/bash
+cd /opt/data/private/ATSS;python3  -m torch.distributed.launch  --nproc_per_node=2     --master_port=$((RANDOM + 10000))     tools/train_net.py     --config-file  configs/atss/atss_R_50_FPN_1x.yaml     DATALOADER.NUM_WORKERS 4     OUTPUT_DIR training_dir/atss_R_50_FPN_1x_G_Focal_Loss_wo_centerness_clsscore_weighted_loc;

@@ -148,16 +148,15 @@ class ATSSHead(torch.nn.Module):
             in_channels, num_anchors * 4, kernel_size=3, stride=1,
             padding=1
         )
-        # #self.centerness = nn.Conv2d(
-        #     in_channels, num_anchors * 1, kernel_size=3, stride=1,
-        #     padding=1
-        # )
+        self.centerness = nn.Conv2d(
+            in_channels, num_anchors * 1, kernel_size=3, stride=1,
+            padding=1
+        )
 
         # initialization
         for modules in [self.cls_tower, self.bbox_tower,
-                        self.cls_logits, self.bbox_pred]:
-            #,
-                        #self.centerness]:
+                        self.cls_logits, self.bbox_pred,
+                        self.centerness]:
             for l in modules.modules():
                 if isinstance(l, nn.Conv2d):
                     torch.nn.init.normal_(l.weight, std=0.01)
@@ -176,7 +175,7 @@ class ATSSHead(torch.nn.Module):
     def forward(self, x):
         logits = []
         bbox_reg = []
-        #centerness = []
+        centerness = []
         for l, feature in enumerate(x):
             cls_tower = self.cls_tower(feature)
             box_tower = self.bbox_tower(feature)
@@ -188,8 +187,8 @@ class ATSSHead(torch.nn.Module):
                 bbox_pred = F.relu(bbox_pred)
             bbox_reg.append(bbox_pred)
 
-            #centerness.append(self.centerness(box_tower))
-        return logits, bbox_reg#, centerness
+            centerness.append(self.centerness(box_tower))
+        return logits, bbox_reg, centerness
 
 
 class ATSSModule(torch.nn.Module):
@@ -204,32 +203,27 @@ class ATSSModule(torch.nn.Module):
         self.anchor_generator = make_anchor_generator_atss(cfg)
 
     def forward(self, images, features, targets=None):
-        box_cls, box_regression = self.head(features)
-        #, centerness
+        box_cls, box_regression, centerness = self.head(features)
         anchors = self.anchor_generator(images, features)
-        #, centerness
+ 
         if self.training:
-            return self._forward_train(box_cls, box_regression, targets, anchors)
+            return self._forward_train(box_cls, box_regression, centerness, targets, anchors)
         else:
-            return self._forward_test(box_cls, box_regression, anchors)
-        # , centerness
-        # , centerness
-    def _forward_train(self, box_cls, box_regression, targets, anchors):
-        #, loss_centerness
-        # , centerness
-        loss_box_cls, loss_box_reg = self.loss_evaluator(
-            box_cls, box_regression, targets, anchors
+            return self._forward_test(box_cls, box_regression, centerness, anchors)
+
+    def _forward_train(self, box_cls, box_regression, centerness, targets, anchors):
+        loss_box_cls, loss_box_reg, loss_centerness = self.loss_evaluator(
+            box_cls, box_regression, centerness, targets, anchors
         )
         losses = {
             "loss_cls": loss_box_cls,
-            "loss_reg": loss_box_reg#,
-            #"loss_centerness": loss_centerness
+            "loss_reg": loss_box_reg,
+            "loss_centerness": loss_centerness
         }
         return None, losses
-    # , centerness
-    def _forward_test(self, box_cls, box_regression, anchors):
-        boxes = self.box_selector_test(box_cls, box_regression, anchors)
-    #    , centerness,
+
+    def _forward_test(self, box_cls, box_regression, centerness, anchors):
+        boxes = self.box_selector_test(box_cls, box_regression, centerness, anchors)
         return boxes, {}
 
 

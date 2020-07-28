@@ -302,9 +302,13 @@ _C.MODEL.ATSS.SCALES_PER_OCTAVE = 1
 _C.MODEL.ATSS.NUM_CONVS = 4
 _C.MODEL.ATSS.USE_DCN_IN_TOWER = False
 
+
 # Focal loss parameter
 _C.MODEL.ATSS.LOSS_ALPHA = 0.25
 _C.MODEL.ATSS.LOSS_GAMMA = 2.0
+
+# Classification Loss for ATSS
+_C.MODEL.ATSS.CLS_LOSS = 'WARPAGE'
 
 # Warpage Loss parameter
 _C.MODEL.ATSS.LOSS_BETA = 1
@@ -482,7 +486,7 @@ _C.SOLVER.WARMUP_FACTOR = 1.0 / 3
 _C.SOLVER.WARMUP_ITERS = 500
 _C.SOLVER.WARMUP_METHOD = "linear"
 
-_C.SOLVER.CHECKPOINT_PERIOD = 2500
+_C.SOLVER.CHECKPOINT_PERIOD = 10000
 
 # Number of images per batch
 # This is global, so if we have 8 GPUs and IMS_PER_BATCH = 16, each GPU will
